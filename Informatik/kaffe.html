@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generer tekst eksempel</title>
+	<script>
+		var data = [
+			{ID: 1, overskrift: "Kaffe", beskrivelse: "En varm drik lavet af ristede kaffebønner.", billede: "kaffe.jpg"},
+			{ID: 2, overskrift: "Te", beskrivelse: "En varm drik lavet af tørrede teblade.", billede: "te.jpg"},
+			{ID: 3, overskrift: "Kakao", beskrivelse: "En varm drik lavet af chokoladepulver og mælk.", billede: "kakao.jpg"},
+		];
+
+		function genererTekst(x){
+			for (var i = 0; i < data.length; i++) {
+				if (data[i]["ID"] == x) {
+					overskrift = data[i]['overskrift']; 
+					beskrivelse = data[i]['beskrivelse'];
+					billede = data[i]['billede'];
+					break;
+				}
+			}
+			document.getElementById("overskrift").innerHTML = overskrift;
+			document.getElementById("beskrivelse").innerHTML = beskrivelse;
+			document.getElementById("billede").src = billede;
+		}
+	</script>
+    
+
+</head>
+<body>
+	<h1>Generer tekst eksempel</h1>
+	<p>Vælg en drik:</p>
+	<button onclick="genererTekst(1)">Kaffe</button>
+	<button onclick="genererTekst(2)">Te</button>
+	<button onclick="genererTekst(3)">Kakao</button>
+	<h2 id="overskrift"></h2>
+	<p id="beskrivelse"></p>
+	<img id="billede" src="" alt="Billede af drikken">
+</body>
+</html>

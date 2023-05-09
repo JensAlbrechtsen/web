@@ -33,7 +33,7 @@ En database består normalt af en eller flere tabeller, som hver indeholder ræk
 Derudover er der 5 normaliseringsregler for databaser. Dem vil jeg ikke gå igennem men det vigtigste er at primærnøglen er unik og at der kun må være én primærnøgle pr. database.
     
     <br><br>    
-Jeg nævnte lige fremmednøgler, men dette gør vi ikke brug af i vores projekt (quiz). Definitionen af fremmednøgler er jo "en primærnøgle fr aen anden tabel". Vi benytter kun én tabel i vores kodning.
+Jeg nævnte lige fremmednøgler, men dette gør vi ikke brug af i vores projekt (quiz). Definitionen af fremmednøgler er jo "en primærnøgle fra en anden tabel". Vi benytter kun én tabel i vores kodning.
     
     </p1>
         
@@ -43,6 +43,24 @@ Jeg nævnte lige fremmednøgler, men dette gør vi ikke brug af i vores projekt 
     <a class="button button2" href="is.html">Is-Quiz</a> 
     
     
+    <h2>Forklaring af kode</h2>
+    <h3>Her er et afsnit af min kode:</h3>
+    <code>
+const submitBtn = document.getElementById("submit-btn"); 
+        <br>
+const nextBtn = document.getElementById("next-btn");
+        <br>
+const flavorInput = document.getElementById("flavor-input");
+        <br>
+const colorInput = document.getElementById("color-input");
+        <br>
+const resultMsg = document.getElementById("result");</code>
+    
+    <br><br>
+    
+    <p2>         
+    I disse linjer henter JavaScript-koden referencer til HTML-elementer med id-attributterne "submit-btn", "next-btn", "flavor-input", "color-input" og "result" ved hjælp af document.getElementById()-metoden. Disse referencer bruges senere i JavaScript-koden til at manipulere indholdet eller egenskaberne for disse elementer.
+    </p2>
     
 </body>
 </html>
